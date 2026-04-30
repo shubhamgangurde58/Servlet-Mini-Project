@@ -25,12 +25,14 @@ public class AdditionPage extends HttpServlet{
 		
 		int add = no1 + no2;
 		
-		PrintWriter out = res.getWriter();
+//		PrintWriter out = res.getWriter();
+//		
+//		req.setAttribute("k", add);
+//		
+//		RequestDispatcher rd = req.getRequestDispatcher("result");
+//		rd.forward(req, res);
 		
-		req.setAttribute("k", add);
-		
-		RequestDispatcher rd = req.getRequestDispatcher("result");
-		rd.forward(req, res);
+		res.sendRedirect("result?k="+add);
 		
 	}
 	
