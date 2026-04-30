@@ -3,6 +3,8 @@ package com.shubham;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +18,7 @@ public class AdditionPage extends HttpServlet{
 	}
 	
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		
 		int no1 = Integer.parseInt(req.getParameter("no1"));
 		int no2 = Integer.parseInt(req.getParameter("no2"));
@@ -25,8 +27,10 @@ public class AdditionPage extends HttpServlet{
 		
 		PrintWriter out = res.getWriter();
 		
-		out.print("<h1>Addition Page!</h1><br>");
-		out.print("<h3> Addition of "+no1+" + "+no2+" = "+add+" </h3>");
+		req.setAttribute("k", add);
+		
+		RequestDispatcher rd = req.getRequestDispatcher("result");
+		rd.forward(req, res);
 		
 	}
 	

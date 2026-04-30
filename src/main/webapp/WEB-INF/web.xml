@@ -21,4 +21,17 @@
  		<servlet-name>AdditionPage</servlet-name>
  		<url-pattern>/add</url-pattern>
  	</servlet-mapping>
+ 	
+ 	
+ 	
+ 	<servlet>
+ 		<servlet-name>ResultPage</servlet-name>
+ 		<servlet-class>com.shubham.ResultPage</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet-mapping>
+ 		<servlet-name>ResultPage</servlet-name>
+ 		<url-pattern>/result</url-pattern>
+ 	</servlet-mapping>
+ 	
 </web-app>
