@@ -34,4 +34,27 @@
  		<url-pattern>/result</url-pattern>
  	</servlet-mapping>
  	
+ 	
+ 	
+ 	<servlet>
+ 		<servlet-name>CookieDemo</servlet-name>
+ 		<servlet-class>com.shubham.CookieDemo</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet-mapping>
+ 		<servlet-name>CookieDemo</servlet-name>
+ 		<url-pattern>/cookie</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	
+ 	<servlet>
+ 		<servlet-name>SessionDemo</servlet-name>
+ 		<servlet-class>com.shubham.SessionDemo</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet-mapping>
+ 		<servlet-name>SessionDemo</servlet-name>
+ 		<url-pattern>/session</url-pattern>
+ 	</servlet-mapping>
+ 	
 </web-app>
